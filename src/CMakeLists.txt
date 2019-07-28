@@ -1,5 +1,5 @@
 list(APPEND ${PROJECT_NAME}_SOURCES
-    matrix_main.cpp
+    bulk_main.cpp
 )
 
 add_executable(${PROJECT_NAME} ${${PROJECT_NAME}_SOURCES})
