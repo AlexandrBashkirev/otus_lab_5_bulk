@@ -12,5 +12,5 @@ class CmdExecutor : public ICmdExecutor
 		std::cout << "bulk: ";
 		std::for_each(cmds.cbegin(), cmds.cend(), [](const Cmd& l) { std::cout << l.getLine() << " "; });
 		std::cout << std::endl;
-	};
+	}
 };

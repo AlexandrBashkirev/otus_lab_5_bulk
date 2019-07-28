@@ -8,7 +8,7 @@ class Cmd : public ICmd
 {
 public:
 	template<typename S>
-	Cmd(S&& _line, std::chrono::seconds _timeStamp) : ICmd(std::forward<S>(_line), _timeStamp) {};
+	Cmd(S&& _line, std::chrono::seconds _timeStamp) : ICmd(std::forward<S>(_line), _timeStamp) {}
 
 	auto getTimeStamp() const
 	{

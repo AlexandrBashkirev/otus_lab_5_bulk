@@ -6,7 +6,7 @@
 class CmdStreamWorker : public ICmdStreamWorker
 {
 public:
-	CmdStreamWorker(std::unique_ptr<IImplementer>&& _impl) : ICmdStreamWorker(std::move(_impl)) {};
+	CmdStreamWorker(std::unique_ptr<IImplementer>&& _impl) : ICmdStreamWorker(std::move(_impl)) {}
 
 	void run(std::istream& _stream)
 	{
@@ -18,5 +18,5 @@ public:
 			else
 				impl->end();
 		}
-	};
+	}
 };

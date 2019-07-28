@@ -19,5 +19,5 @@ public:
 			std::for_each(cmds.cbegin(), cmds.cend(), [&log](const Cmd& l) { log << l.getLine() << " "; });
 			log << std::endl;
 		}
-	};
+	}
 };
