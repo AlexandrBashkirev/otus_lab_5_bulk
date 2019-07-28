@@ -1,10 +1,10 @@
 #pragma once
-#include "ICmd.h"
 #include <list>
 #include <string>
+#include "Cmd.h"
 
 class ICmdExecutor
 {
 public:
-	virtual void addCmd(const std::list<std::string>& cmds) = 0;
+	virtual void addCmd(const std::list<Cmd>& cmds) = 0;
 };

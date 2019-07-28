@@ -2,16 +2,21 @@
 //
 
 #include <iostream>
+#include <string>
 #include "CmdExecutor.h"
 #include "CmdStreamWorker.h"
 #include "Implementer.h"
 #include "CmdLogger.h"
 
-int main()
-{
-	auto impl = std::make_unique<Implementer>(2);
+int main(int argc, char* argv[]) {
+	if (argc != 2) 
+		return -1;
+
+	const size_t siquensLength = std::stoul(argv[1]);
+
+	auto impl = std::make_unique<Implementer>(siquensLength);
 	impl->addCmdExecutor(std::move(std::make_unique<CmdExecutor>()));
-	impl->addCmdExecutor(std::move(std::make_unique<CmdLogger>("log.log")));
+	impl->addCmdExecutor(std::move(std::make_unique<CmdLogger>()));
 
 	CmdStreamWorker worker(std::move(impl));
 
