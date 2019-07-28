@@ -3,6 +3,7 @@
 #include <list>
 #include <chrono>
 #include <ctime>
+#include <memory>
 
 class Implementer : public IImplementer
 {

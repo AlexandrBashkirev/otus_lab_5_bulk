@@ -7,6 +7,7 @@
 #include "CmdStreamWorker.h"
 #include "Implementer.h"
 #include "CmdLogger.h"
+#include <memory>
 
 int main(int argc, char* argv[]) {
 	if (argc != 2) 

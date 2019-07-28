@@ -2,6 +2,7 @@
 #include "ICmdExecutor.h"
 #include <list>
 #include <string>
+#include <memory>
 
 class IImplementer
 {
