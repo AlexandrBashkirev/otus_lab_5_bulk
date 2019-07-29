@@ -13,9 +13,9 @@ int main(int argc, char* argv[]) {
 	if (argc != 2) 
 		return -1;
 
-	const size_t siquensLength = std::stoul(argv[1]);
+	const size_t sequenceLength = std::stoul(argv[1]);
 
-	auto impl = std::make_unique<Implementer>(siquensLength);
+	auto impl = std::make_unique<Implementer>(sequenceLength);
 	impl->addCmdExecutor(std::move(std::make_unique<CmdExecutor>()));
 	impl->addCmdExecutor(std::move(std::make_unique<CmdLogger>()));
 

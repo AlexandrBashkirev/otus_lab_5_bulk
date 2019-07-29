@@ -13,12 +13,12 @@ class Implementer : public IImplementer
 	};
 	ImplementState state = RegularCmd;
 
-	int siquensLength;
+	int sequenceLength;
 	std::list<Cmd> cmds;
 	int depthBrace = 0;
 
 public:
-	Implementer(int _siquensLength = 3) : siquensLength(_siquensLength){}
+	Implementer(int _sequenceLength = 3) : sequenceLength(_sequenceLength){}
 
 	void implementLine(std::string line) {
 		// ugly code :( but how do it better?
@@ -44,7 +44,7 @@ public:
 		if (!openBrace && !closeBrace)
 			cmds.push_back(Cmd( line, std::chrono::seconds(std::time(NULL))));
 
-		if (cmds.size() == siquensLength && state == RegularCmd)
+		if (cmds.size() == sequenceLength && state == RegularCmd)
 			executeBuffer();
 	};
 	void end() {};
