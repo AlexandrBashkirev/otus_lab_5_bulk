@@ -22,5 +22,4 @@ int main(int argc, char* argv[]) {
 	CmdStreamWorker worker(std::move(impl));
 
 	worker.run(std::cin);
-
 }

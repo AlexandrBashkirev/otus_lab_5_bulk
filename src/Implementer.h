@@ -47,7 +47,10 @@ public:
 		if (cmds.size() == sequenceLength && state == RegularCmd)
 			executeBuffer();
 	};
-	void end() {};
+	void end() {
+		if (state == RegularCmd)
+			executeBuffer();
+	};
 
 private:
 	void executeBuffer()
